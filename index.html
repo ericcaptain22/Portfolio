@@ -16,6 +16,9 @@
   <title>Personal Portfolio</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -34,7 +37,7 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
+  <scrip>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -74,7 +77,7 @@
 <!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
           <li><a href="#portfolio"> <span>Projects</span></a></li>
           <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
+          <li><a href="#resume"> <span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
 
@@ -576,9 +579,9 @@
               <h4 style="text-align:left;color:#09203a">Tools</h4>
                 <p style="text-align:left;">
                   <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="assets/img/certification/kali.png" alt="vector.logo"height="90" width="110">
-                  <img src="assets/img/certification/nmap.png" alt="vector.logo" height="90" width="100">
-                  <img src="assets/img/certification/Meta.png" alt="vector.logo" height="90" width="110">
+                  <img src="assets/img/certification/kali.png" alt="vectorlogo.zone" height="90" width="110">
+                  <img src="assets/img/certification/nmap.png" alt="vectorlogo.zone" height="90" width="100">
+                  <img src="assets/img/certification/Meta.png" alt="vectorlogo.zone" height="90" width="110">
               </p>
           </div>
         </div>
@@ -592,22 +595,139 @@
 
 
   <!-- Start Links section -->
-  <section id="links" class="services">
+  <section id="resume" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Resume & Links</h2>
+        <h2>Resume</h2>
       </div>
-      <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing" target="_blank">Resume</a></h4>
-          <p class="description" style="color:#fff;">The link contains downloadable resume</p>
+      <div class="row justify-content-center mb-3">
+        <div class="col-12 col-lg-10">
+          <iframe id="resumeIframe" src="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/preview" class="centered-frame" style="width: 85%; height:590px; border: none; overflow: auto;" frameborder="0"></iframe>
         </div>
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up">
+      </div>
+       
+      <div class="row mt-3 btn-container justify-content-center">
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
+          <button onclick="downloadResume()" class="custom-btn">Download</button>
+        </div>
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
+          <button onclick="shareResume()" class="custom-btn">Share</button>
+        </div>
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-2">
+          <button onclick="printResume()" class="custom-btn">Print</button>
+        </div>
+      </div>
+
+      <style>
+        .custom-btn {
+          background-color: #12D640;
+          border: none;
+          font-weight: bolder;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 16px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          border-radius: 12px;
+          width: 100%;
+          height: 100%;
+        }
+      
+        .custom-btn:hover {
+          background-color: white;
+          color: #12d640;
+          font-weight: bolder;
+          border: 2px solid #1c7d32;
+        }
+      
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 20px; /* Default margin for smaller screens */
+        }
+      
+        .btn-container .col-12 {
+          display: flex;
+          justify-content: center;
+        }
+      
+        .btn-container .col-12 > .custom-btn {
+          flex: 1;
+        }
+      
+        .btn-container .col-sm-4,
+        .btn-container .col-md-3,
+        .btn-container .col-lg-2 {
+          display: flex;
+          justify-content: center;
+        }
+      
+        .btn-container .col-sm-4 > .custom-btn,
+        .btn-container .col-md-3 > .custom-btn,
+        .btn-container .col-lg-2 > .custom-btn {
+          flex: 1;
+        }
+      
+        .centered-frame {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          height: 800px;
+          border: none;
+          overflow: auto;
+          margin-bottom: 20px; /* Default margin for smaller screens */
+        }
+
+        .custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #12D640;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-alert.show {
+    opacity: 1;
+  }
+
+
+      
+        @media (min-width: 992px) {
+          .btn-container {
+            margin-top: 40px; /* Adjusted margin for larger screens (laptops) */
+          }
+      
+          .centered-frame {
+            margin-bottom: 40px; /* Adjusted margin for larger screens (laptops) */
+          }
+        }
+      </style>
+      
+
+      
+
+
+      <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing"><div class="icon"><i class="icofont-page"></i></div></a>
+          <h4 class="title"><a href="https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing">Resume</a></h4>
+          <p class="description" style="color:#fff;">The link contains downloadable resume</p>
+        </div> -->
+     <!--   <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up">
           <a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank"><div class="icon"><i class="icofont-link"></i></div></a>
           <h4 class="title"><a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank">LeetCode Repository</a></h4>
           <p class="description" style="color:#fff;"> The github repository contains leetcode problems solution in python.</p>
-        </div>
+        </div> -->
         <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://techingenious.herokuapp.com/" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
           <h4 class="title"><a href="https://techingenious.herokuapp.com/" target="_blank">Blog</a></h4>
@@ -617,6 +737,81 @@
     </div>
   </section> <!--End Links Section -->
 
+  <script>
+    function downloadResume() {
+      window.open('https://drive.google.com/uc?export=download&id=1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8', '_blank');
+    }
+  
+  /*  function shareResume() {
+      const shareUrl = 'https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing';
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert('Resume link copied to clipboard!');
+      });
+    } */
+    
+    function shareResume() {
+  const shareUrl = 'https://drive.google.com/file/d/1yGsK45wk0XoItgPmhkBoR5xPAAZ-f2S8/view?usp=sharing';
+  
+  // Define parameters for each platform
+  const shareData = {
+    title: 'Check out my resume!',
+    text: 'Here is my updated resume. Click the link to view.',
+    url: shareUrl,
+  };
+  
+  // Use navigator.share if available (modern browsers supporting Web Share API)
+  if (navigator.share) {
+    navigator.share(shareData)
+      .then(() => console.log('Shared successfully'))
+      .catch((error) => console.error('Error sharing:', error));
+  } else {
+    // Fallback for browsers that do not support Web Share API
+    const platform = detectPlatform(); // Implement detectPlatform() function to determine platform
+    switch (platform) {
+      case 'whatsapp':
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`, '_blank');
+        break;
+      case 'instagram':
+        window.open(`https://www.instagram.com/share?url=${encodeURIComponent(shareData.url)}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareData.url)}&title=${encodeURIComponent(shareData.title)}&summary=${encodeURIComponent(shareData.text)}`, '_blank');
+        break;
+      case 'email':
+        window.location.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)} ${encodeURIComponent(shareData.url)}`;
+        break;
+      default:
+        alert('Sharing via this platform is not supported.');
+    }
+  }
+}
+
+function detectPlatform() {
+  // Implement logic to detect platform based on user agent or other methods
+  // Return 'whatsapp', 'instagram', 'linkedin', 'email', etc. based on the platform detected
+  // Example:
+  const userAgent = navigator.userAgent.toLowerCase();
+  if (userAgent.includes('whatsapp')) {
+    return 'whatsapp';
+  } else if (userAgent.includes('instagram')) {
+    return 'instagram';
+  } else if (userAgent.includes('linkedin')) {
+    return 'linkedin';
+  } else {
+    return 'email';
+  }
+}
+
+
+  
+    function printResume() {
+      const iframe = document.getElementById('resumeIframe');
+      iframe.src = 'assets/img/Eric Resume.pdf';
+      iframe.contentWindow.focus();
+      iframe.contentWindow.print();
+    }
+  </script>
+  
 
   <!-- Start Contact Section -->
 
