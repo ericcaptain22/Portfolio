@@ -756,8 +756,13 @@
     function printResume() {
       const iframe = document.getElementById('resumeIframe');
       iframe.src = 'assets/img/Eric.pdf';
-      iframe.contentWindow.focus();
-      iframe.contentWindow.print();
+     // iframe.contentWindow.focus();
+      const newWindow = window.open(iframe.src, '_blank');
+      newWindow.focus();
+     // newWindow.onload = function() {
+     //   newWindow.print();
+   // };
+       iframe.contentWindow.print();
     }
 </script>
 
